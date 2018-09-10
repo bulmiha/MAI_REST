@@ -20,4 +20,6 @@
 
 #### Currently configured for building on macOS
 
+##### All required libraries on macOS are available through brew
+
 Change CMakeLists on another platform
