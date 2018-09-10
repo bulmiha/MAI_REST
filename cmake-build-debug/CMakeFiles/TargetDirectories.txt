@@ -1,3 +1,0 @@
-/Users/redfox/CLionProjects/mai/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/redfox/CLionProjects/mai/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/redfox/CLionProjects/mai/cmake-build-debug/CMakeFiles/mai.dir

@@ -1,0 +1,5 @@
+
+\.idea/
+
+*.includecache
+cmake-build-debug*

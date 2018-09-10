@@ -18,7 +18,6 @@ using namespace utility;
 using namespace http::experimental::listener;
 
 
-
 class WeaterServerForecast {
 public:
     WeaterServerForecast() {}
@@ -41,6 +40,9 @@ private:
     void handle_delete(http_request msg);
 
     json::value answer_f;
+    std::unique_ptr<http::client::http_client> client;
+    string_t api_key;
+    string_t api_addr;
 
 };
 

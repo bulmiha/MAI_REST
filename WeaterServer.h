@@ -5,7 +5,7 @@
 #ifndef MAI_WEATERSERVER_H
 #define MAI_WEATERSERVER_H
 
-//#include <cpprest/http_client_c.h>
+#include <cpprest/http_client.h>
 #include <cpprest/filestream.h>
 #include "cpprest/json.h"
 #include "cpprest/http_listener.h"
@@ -17,7 +17,6 @@ using namespace http;
 using namespace utility;
 using namespace http::experimental::listener;
 using namespace http::client;
-
 
 
 class WeaterServer {

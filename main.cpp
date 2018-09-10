@@ -24,7 +24,7 @@ void on_start(const string_t &address) {
     uri_builder uri_f(address);
     uri_f.append_path(U("/v1/forecast/"));
 
-    addr=uri_f.to_uri().to_string();
+    addr = uri_f.to_uri().to_string();
     g_http_forecast = std::unique_ptr<WeaterServerForecast>(new WeaterServerForecast(addr));
     g_http_forecast->open().wait();
 
@@ -43,15 +43,15 @@ void on_end() {
 int main(int argc, char *args[]) {
     string_t port = U("8080");
 
+    if (const char *env_p = std::getenv("LISTEN_PORT")) {
+        port = env_p;
+    }
+
     if (argc >= 2) {
         port = args[1];
     }
 
     string_t address = U("http://0.0.0.0:");
-
-    if(const char* env_p = std::getenv("LISTEN_PORT")){
-        port=env_p;
-    }
 
     address.append(port);
 
