@@ -49,6 +49,10 @@ int main(int argc, char *args[]) {
 
     string_t address = U("http://0.0.0.0:");
 
+    if(const char* env_p = std::getenv("LISTEN_PORT")){
+        port=env_p;
+    }
+
     address.append(port);
 
     on_start(address);

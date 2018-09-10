@@ -2432,14 +2432,16 @@ CMakeFiles/mai.dir/WeaterServerForecast.cpp.o
  /usr/local/include/cpprest/details/SafeInt3.hpp
  /usr/local/include/cpprest/details/basic_types.h
  /usr/local/include/cpprest/details/cpprest_compat.h
- /usr/local/include/cpprest/details/fileio.h
  /usr/local/include/cpprest/details/http_constants.dat
  /usr/local/include/cpprest/details/nosal.h
- /usr/local/include/cpprest/filestream.h
+ /usr/local/include/cpprest/details/web_utilities.h
+ /usr/local/include/cpprest/http_client.h
  /usr/local/include/cpprest/http_headers.h
  /usr/local/include/cpprest/http_listener.h
  /usr/local/include/cpprest/http_msg.h
  /usr/local/include/cpprest/json.h
+ /usr/local/include/cpprest/oauth1.h
+ /usr/local/include/cpprest/oauth2.h
  /usr/local/include/cpprest/streams.h
  /usr/local/include/cpprest/uri.h
  /usr/local/include/cpprest/uri_builder.h
@@ -3683,11 +3685,15 @@ CMakeFiles/mai.dir/main.cpp.o
  /usr/local/include/cpprest/details/fileio.h
  /usr/local/include/cpprest/details/http_constants.dat
  /usr/local/include/cpprest/details/nosal.h
+ /usr/local/include/cpprest/details/web_utilities.h
  /usr/local/include/cpprest/filestream.h
+ /usr/local/include/cpprest/http_client.h
  /usr/local/include/cpprest/http_headers.h
  /usr/local/include/cpprest/http_listener.h
  /usr/local/include/cpprest/http_msg.h
  /usr/local/include/cpprest/json.h
+ /usr/local/include/cpprest/oauth1.h
+ /usr/local/include/cpprest/oauth2.h
  /usr/local/include/cpprest/streams.h
  /usr/local/include/cpprest/uri.h
  /usr/local/include/cpprest/uri_builder.h
