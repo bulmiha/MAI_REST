@@ -3,3 +3,4 @@
 
 *.includecache
 cmake-build-debug*
+\.DS_Store

@@ -25,6 +25,7 @@ WeaterServer::WeaterServer(utility::string_t url) : w_listener(url) {
     } else {
         ucout << "Please provide api key through env" << endl;
         api_key = U("0");
+        exit(1);
     }
     client_c = std::unique_ptr<http::client::http_client>(new http_client(api_addr));
 }
