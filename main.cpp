@@ -17,7 +17,6 @@ void on_start(const string_t &address) {
 
     auto addr = uri_c.to_uri().to_string();
     g_http_cur = std::unique_ptr<WeaterServer>(new WeaterServer(addr));
-    g_http_cur->open().wait();
 
     ucout << string_t(U("Listening on: ")) << addr << std::endl;
 
@@ -26,6 +25,8 @@ void on_start(const string_t &address) {
 
     addr = uri_f.to_uri().to_string();
     g_http_forecast = std::unique_ptr<WeaterServerForecast>(new WeaterServerForecast(addr));
+
+    g_http_cur->open().wait();
     g_http_forecast->open().wait();
 
     ucout << string_t(U("Listening on: ")) << addr << std::endl;
