@@ -58,11 +58,13 @@ int main(int argc, char *args[]) {
 
     on_start(address);
 
-    std::cout << "Press ENTER to exit" << std::endl;
+    std::cout << "Write exit and press Enter to exit" << std::endl;
 
     std::string line;
-
-    std::getline(std::cin, line);
+    do {
+        std::getline(std::cin, line);
+    }
+    while (line!="exit");
 
     on_end();
 

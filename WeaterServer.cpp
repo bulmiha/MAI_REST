@@ -21,7 +21,13 @@ WeaterServer::WeaterServer(utility::string_t url) : w_listener(url) {
         api_addr = U("http://api.weatherbit.io/");
     }
     if (const char *env_p = std::getenv("API_KEY")) {
-        api_key = U(env_p);
+        if (strlen(env_p) == 32)
+            api_key = U(env_p);
+        else {
+            ucout << "Wrong key format" << endl;
+            api_key = U("0");
+            exit(1);
+        }
     } else {
         ucout << "Please provide api key through env" << endl;
         api_key = U("0");

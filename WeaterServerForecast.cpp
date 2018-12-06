@@ -8,9 +8,8 @@ using namespace std;
 using namespace web;
 using namespace utility;
 using namespace http;
-using namespace web::http::experimental::listener;
+using namespace http::experimental::listener;
 using namespace client;
-
 
 WeaterServerForecast::WeaterServerForecast(utility::string_t url) : w_listener(url) {
     w_listener.support(methods::GET, std::bind(&WeaterServerForecast::handle_get, this, std::placeholders::_1));
@@ -22,7 +21,13 @@ WeaterServerForecast::WeaterServerForecast(utility::string_t url) : w_listener(u
         api_addr = U("http://api.weatherbit.io/");
     }
     if (const char *env_p = std::getenv("API_KEY")) {
-        api_key = U(env_p);
+        if (strlen(env_p) == 32)
+            api_key = U(env_p);
+        else {
+            ucout << "Wrong key format" << endl;
+            api_key = U("0");
+            exit(1);
+        }
     } else {
         ucout << "Please provide api key through env" << endl;
         exit(1);
