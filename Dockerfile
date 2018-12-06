@@ -1,6 +1,10 @@
 FROM ubuntu:latest
 
-RUN apt update; apt full-upgrade -y; apt install libcpprest-dev cmake -y
+RUN apt update
+
+RUN apt full-upgrade -y
+
+RUN apt install libcpprest-dev cmake -y
 
 COPY . /root/mai/
 
