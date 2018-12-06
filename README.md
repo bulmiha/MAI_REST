@@ -17,9 +17,3 @@
 - LISTEN_PORT - for custom port (also can be specified as first argument)
 
 ### Using CMake build system
-
-#### Currently configured for building on macOS
-
-##### All required libraries on macOS are available through brew
-
-Change CMakeLists on another platform
